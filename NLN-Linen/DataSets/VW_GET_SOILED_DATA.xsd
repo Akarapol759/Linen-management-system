@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VW_GET_SOILED_DATA" targetNamespace="http://tempuri.org/VW_GET_SOILED_DATA.xsd" xmlns:mstns="http://tempuri.org/VW_GET_SOILED_DATA.xsd" xmlns="http://tempuri.org/VW_GET_SOILED_DATA.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_GET_SOILED_DATATableAdapter" GeneratorDataComponentClassName="VW_GET_SOILED_DATATableAdapter" Name="VW_GET_SOILED_DATA" UserDataComponentName="VW_GET_SOILED_DATATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="NLNDB.dbo.VW_GET_SOILED_DATA" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, BU_CODE, BU_SHORT_NAME, BU_FULL_NAME, LAUNDRY_CODE, LAUNDRY_NAME, SOILED_REQUEST_NO, CYCLE_TIME_PICKUP, CYCLE_TIME_TO_LAUNDRY, CREATE_DATE, CUS_CODE, CUS_NAME, SOILED_REQUEST_TYPE, SOILED_REQUEST_TYPE_NAME, SOILED_REQUEST_QTY, SOILED_REQUEST_WEIGHT FROM dbo.VW_GET_SOILED_DATA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="BU_CODE" DataSetColumn="BU_CODE" />
+              <Mapping SourceColumn="BU_SHORT_NAME" DataSetColumn="BU_SHORT_NAME" />
+              <Mapping SourceColumn="BU_FULL_NAME" DataSetColumn="BU_FULL_NAME" />
+              <Mapping SourceColumn="LAUNDRY_CODE" DataSetColumn="LAUNDRY_CODE" />
+              <Mapping SourceColumn="LAUNDRY_NAME" DataSetColumn="LAUNDRY_NAME" />
+              <Mapping SourceColumn="SOILED_REQUEST_NO" DataSetColumn="SOILED_REQUEST_NO" />
+              <Mapping SourceColumn="CYCLE_TIME_PICKUP" DataSetColumn="CYCLE_TIME_PICKUP" />
+              <Mapping SourceColumn="CYCLE_TIME_TO_LAUNDRY" DataSetColumn="CYCLE_TIME_TO_LAUNDRY" />
+              <Mapping SourceColumn="CREATE_DATE" DataSetColumn="CREATE_DATE" />
+              <Mapping SourceColumn="CUS_CODE" DataSetColumn="CUS_CODE" />
+              <Mapping SourceColumn="CUS_NAME" DataSetColumn="CUS_NAME" />
+              <Mapping SourceColumn="SOILED_REQUEST_TYPE" DataSetColumn="SOILED_REQUEST_TYPE" />
+              <Mapping SourceColumn="SOILED_REQUEST_TYPE_NAME" DataSetColumn="SOILED_REQUEST_TYPE_NAME" />
+              <Mapping SourceColumn="SOILED_REQUEST_QTY" DataSetColumn="SOILED_REQUEST_QTY" />
+              <Mapping SourceColumn="SOILED_REQUEST_WEIGHT" DataSetColumn="SOILED_REQUEST_WEIGHT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VW_GET_SOILED_DATA" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="VW_GET_SOILED_DATA" msprop:Generator_UserDSName="VW_GET_SOILED_DATA">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VW_GET_SOILED_DATA" msprop:Generator_TableClassName="VW_GET_SOILED_DATADataTable" msprop:Generator_TableVarName="tableVW_GET_SOILED_DATA" msprop:Generator_TablePropName="_VW_GET_SOILED_DATA" msprop:Generator_RowDeletingName="VW_GET_SOILED_DATARowDeleting" msprop:Generator_RowChangingName="VW_GET_SOILED_DATARowChanging" msprop:Generator_RowEvHandlerName="VW_GET_SOILED_DATARowChangeEventHandler" msprop:Generator_RowDeletedName="VW_GET_SOILED_DATARowDeleted" msprop:Generator_UserTableName="VW_GET_SOILED_DATA" msprop:Generator_RowChangedName="VW_GET_SOILED_DATARowChanged" msprop:Generator_RowEvArgName="VW_GET_SOILED_DATARowChangeEvent" msprop:Generator_RowClassName="VW_GET_SOILED_DATARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:long" />
+              <xs:element name="BU_CODE" msprop:Generator_ColumnVarNameInTable="columnBU_CODE" msprop:Generator_ColumnPropNameInRow="BU_CODE" msprop:Generator_ColumnPropNameInTable="BU_CODEColumn" msprop:Generator_UserColumnName="BU_CODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BU_SHORT_NAME" msprop:Generator_ColumnVarNameInTable="columnBU_SHORT_NAME" msprop:Generator_ColumnPropNameInRow="BU_SHORT_NAME" msprop:Generator_ColumnPropNameInTable="BU_SHORT_NAMEColumn" msprop:Generator_UserColumnName="BU_SHORT_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BU_FULL_NAME" msprop:Generator_ColumnVarNameInTable="columnBU_FULL_NAME" msprop:Generator_ColumnPropNameInRow="BU_FULL_NAME" msprop:Generator_ColumnPropNameInTable="BU_FULL_NAMEColumn" msprop:Generator_UserColumnName="BU_FULL_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LAUNDRY_CODE" msprop:Generator_ColumnVarNameInTable="columnLAUNDRY_CODE" msprop:Generator_ColumnPropNameInRow="LAUNDRY_CODE" msprop:Generator_ColumnPropNameInTable="LAUNDRY_CODEColumn" msprop:Generator_UserColumnName="LAUNDRY_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LAUNDRY_NAME" msprop:Generator_ColumnVarNameInTable="columnLAUNDRY_NAME" msprop:Generator_ColumnPropNameInRow="LAUNDRY_NAME" msprop:Generator_ColumnPropNameInTable="LAUNDRY_NAMEColumn" msprop:Generator_UserColumnName="LAUNDRY_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOILED_REQUEST_NO" msprop:Generator_ColumnVarNameInTable="columnSOILED_REQUEST_NO" msprop:Generator_ColumnPropNameInRow="SOILED_REQUEST_NO" msprop:Generator_ColumnPropNameInTable="SOILED_REQUEST_NOColumn" msprop:Generator_UserColumnName="SOILED_REQUEST_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CYCLE_TIME_PICKUP" msprop:Generator_ColumnVarNameInTable="columnCYCLE_TIME_PICKUP" msprop:Generator_ColumnPropNameInRow="CYCLE_TIME_PICKUP" msprop:Generator_ColumnPropNameInTable="CYCLE_TIME_PICKUPColumn" msprop:Generator_UserColumnName="CYCLE_TIME_PICKUP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CYCLE_TIME_TO_LAUNDRY" msprop:Generator_ColumnVarNameInTable="columnCYCLE_TIME_TO_LAUNDRY" msprop:Generator_ColumnPropNameInRow="CYCLE_TIME_TO_LAUNDRY" msprop:Generator_ColumnPropNameInTable="CYCLE_TIME_TO_LAUNDRYColumn" msprop:Generator_UserColumnName="CYCLE_TIME_TO_LAUNDRY">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATE_DATE" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" type="xs:dateTime" />
+              <xs:element name="CUS_CODE" msprop:Generator_ColumnVarNameInTable="columnCUS_CODE" msprop:Generator_ColumnPropNameInRow="CUS_CODE" msprop:Generator_ColumnPropNameInTable="CUS_CODEColumn" msprop:Generator_UserColumnName="CUS_CODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUS_NAME" msprop:Generator_ColumnVarNameInTable="columnCUS_NAME" msprop:Generator_ColumnPropNameInRow="CUS_NAME" msprop:Generator_ColumnPropNameInTable="CUS_NAMEColumn" msprop:Generator_UserColumnName="CUS_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOILED_REQUEST_TYPE" msprop:Generator_ColumnVarNameInTable="columnSOILED_REQUEST_TYPE" msprop:Generator_ColumnPropNameInRow="SOILED_REQUEST_TYPE" msprop:Generator_ColumnPropNameInTable="SOILED_REQUEST_TYPEColumn" msprop:Generator_UserColumnName="SOILED_REQUEST_TYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOILED_REQUEST_TYPE_NAME" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSOILED_REQUEST_TYPE_NAME" msprop:Generator_ColumnPropNameInRow="SOILED_REQUEST_TYPE_NAME" msprop:Generator_ColumnPropNameInTable="SOILED_REQUEST_TYPE_NAMEColumn" msprop:Generator_UserColumnName="SOILED_REQUEST_TYPE_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOILED_REQUEST_QTY" msprop:Generator_ColumnVarNameInTable="columnSOILED_REQUEST_QTY" msprop:Generator_ColumnPropNameInRow="SOILED_REQUEST_QTY" msprop:Generator_ColumnPropNameInTable="SOILED_REQUEST_QTYColumn" msprop:Generator_UserColumnName="SOILED_REQUEST_QTY" type="xs:int" />
+              <xs:element name="SOILED_REQUEST_WEIGHT" msprop:Generator_ColumnVarNameInTable="columnSOILED_REQUEST_WEIGHT" msprop:Generator_ColumnPropNameInRow="SOILED_REQUEST_WEIGHT" msprop:Generator_ColumnPropNameInTable="SOILED_REQUEST_WEIGHTColumn" msprop:Generator_UserColumnName="SOILED_REQUEST_WEIGHT" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VW_GET_SOILED_DATA" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

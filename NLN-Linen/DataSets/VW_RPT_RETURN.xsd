@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VW_RPT_RETURN" targetNamespace="http://tempuri.org/VW_RPT_RETURN.xsd" xmlns:mstns="http://tempuri.org/VW_RPT_RETURN.xsd" xmlns="http://tempuri.org/VW_RPT_RETURN.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_RPT_RETURNTableAdapter" GeneratorDataComponentClassName="VW_RPT_RETURNTableAdapter" Name="VW_RPT_RETURN" UserDataComponentName="VW_RPT_RETURNTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="NLNDB.dbo.VW_RPT_RETURN" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT BU_CODE, BU_SHORT_NAME, CUS_CODE, CUS_NAME, ITEM_CODE, ITEM_NAME, ITEM_WEIGHT, RTN_QTY, TOTAL_WEIGHT, AMOUNT, CREATE_DATE, PRICE, CATEGORY_ID, CATEGORY_NAME, GROUP_CODE, GROUP_NAME FROM dbo.VW_RPT_RETURN</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BU_CODE" DataSetColumn="BU_CODE" />
+              <Mapping SourceColumn="BU_SHORT_NAME" DataSetColumn="BU_SHORT_NAME" />
+              <Mapping SourceColumn="CUS_CODE" DataSetColumn="CUS_CODE" />
+              <Mapping SourceColumn="CUS_NAME" DataSetColumn="CUS_NAME" />
+              <Mapping SourceColumn="ITEM_CODE" DataSetColumn="ITEM_CODE" />
+              <Mapping SourceColumn="ITEM_NAME" DataSetColumn="ITEM_NAME" />
+              <Mapping SourceColumn="ITEM_WEIGHT" DataSetColumn="ITEM_WEIGHT" />
+              <Mapping SourceColumn="RTN_QTY" DataSetColumn="RTN_QTY" />
+              <Mapping SourceColumn="TOTAL_WEIGHT" DataSetColumn="TOTAL_WEIGHT" />
+              <Mapping SourceColumn="AMOUNT" DataSetColumn="AMOUNT" />
+              <Mapping SourceColumn="CREATE_DATE" DataSetColumn="CREATE_DATE" />
+              <Mapping SourceColumn="PRICE" DataSetColumn="PRICE" />
+              <Mapping SourceColumn="CATEGORY_ID" DataSetColumn="CATEGORY_ID" />
+              <Mapping SourceColumn="CATEGORY_NAME" DataSetColumn="CATEGORY_NAME" />
+              <Mapping SourceColumn="GROUP_CODE" DataSetColumn="GROUP_CODE" />
+              <Mapping SourceColumn="GROUP_NAME" DataSetColumn="GROUP_NAME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VW_RPT_RETURN" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="VW_RPT_RETURN" msprop:Generator_UserDSName="VW_RPT_RETURN">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VW_RPT_RETURN" msprop:Generator_TableClassName="VW_RPT_RETURNDataTable" msprop:Generator_TableVarName="tableVW_RPT_RETURN" msprop:Generator_TablePropName="_VW_RPT_RETURN" msprop:Generator_RowDeletingName="VW_RPT_RETURNRowDeleting" msprop:Generator_RowChangingName="VW_RPT_RETURNRowChanging" msprop:Generator_RowEvHandlerName="VW_RPT_RETURNRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_RPT_RETURNRowDeleted" msprop:Generator_UserTableName="VW_RPT_RETURN" msprop:Generator_RowChangedName="VW_RPT_RETURNRowChanged" msprop:Generator_RowEvArgName="VW_RPT_RETURNRowChangeEvent" msprop:Generator_RowClassName="VW_RPT_RETURNRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BU_CODE" msprop:Generator_ColumnVarNameInTable="columnBU_CODE" msprop:Generator_ColumnPropNameInRow="BU_CODE" msprop:Generator_ColumnPropNameInTable="BU_CODEColumn" msprop:Generator_UserColumnName="BU_CODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BU_SHORT_NAME" msprop:Generator_ColumnVarNameInTable="columnBU_SHORT_NAME" msprop:Generator_ColumnPropNameInRow="BU_SHORT_NAME" msprop:Generator_ColumnPropNameInTable="BU_SHORT_NAMEColumn" msprop:Generator_UserColumnName="BU_SHORT_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUS_CODE" msprop:Generator_ColumnVarNameInTable="columnCUS_CODE" msprop:Generator_ColumnPropNameInRow="CUS_CODE" msprop:Generator_ColumnPropNameInTable="CUS_CODEColumn" msprop:Generator_UserColumnName="CUS_CODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUS_NAME" msprop:Generator_ColumnVarNameInTable="columnCUS_NAME" msprop:Generator_ColumnPropNameInRow="CUS_NAME" msprop:Generator_ColumnPropNameInTable="CUS_NAMEColumn" msprop:Generator_UserColumnName="CUS_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEM_CODE" msprop:Generator_ColumnVarNameInTable="columnITEM_CODE" msprop:Generator_ColumnPropNameInRow="ITEM_CODE" msprop:Generator_ColumnPropNameInTable="ITEM_CODEColumn" msprop:Generator_UserColumnName="ITEM_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEM_NAME" msprop:Generator_ColumnVarNameInTable="columnITEM_NAME" msprop:Generator_ColumnPropNameInRow="ITEM_NAME" msprop:Generator_ColumnPropNameInTable="ITEM_NAMEColumn" msprop:Generator_UserColumnName="ITEM_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEM_WEIGHT" msprop:Generator_ColumnVarNameInTable="columnITEM_WEIGHT" msprop:Generator_ColumnPropNameInRow="ITEM_WEIGHT" msprop:Generator_ColumnPropNameInTable="ITEM_WEIGHTColumn" msprop:Generator_UserColumnName="ITEM_WEIGHT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RTN_QTY" msprop:Generator_ColumnVarNameInTable="columnRTN_QTY" msprop:Generator_ColumnPropNameInRow="RTN_QTY" msprop:Generator_ColumnPropNameInTable="RTN_QTYColumn" msprop:Generator_UserColumnName="RTN_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOTAL_WEIGHT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTAL_WEIGHT" msprop:Generator_ColumnPropNameInRow="TOTAL_WEIGHT" msprop:Generator_ColumnPropNameInTable="TOTAL_WEIGHTColumn" msprop:Generator_UserColumnName="TOTAL_WEIGHT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AMOUNT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAMOUNT" msprop:Generator_ColumnPropNameInRow="AMOUNT" msprop:Generator_ColumnPropNameInTable="AMOUNTColumn" msprop:Generator_UserColumnName="AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CREATE_DATE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCREATE_DATE" msprop:Generator_ColumnPropNameInRow="CREATE_DATE" msprop:Generator_ColumnPropNameInTable="CREATE_DATEColumn" msprop:Generator_UserColumnName="CREATE_DATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRICE" msprop:Generator_ColumnVarNameInTable="columnPRICE" msprop:Generator_ColumnPropNameInRow="PRICE" msprop:Generator_ColumnPropNameInTable="PRICEColumn" msprop:Generator_UserColumnName="PRICE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CATEGORY_ID" msprop:Generator_ColumnVarNameInTable="columnCATEGORY_ID" msprop:Generator_ColumnPropNameInRow="CATEGORY_ID" msprop:Generator_ColumnPropNameInTable="CATEGORY_IDColumn" msprop:Generator_UserColumnName="CATEGORY_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CATEGORY_NAME" msprop:Generator_ColumnVarNameInTable="columnCATEGORY_NAME" msprop:Generator_ColumnPropNameInRow="CATEGORY_NAME" msprop:Generator_ColumnPropNameInTable="CATEGORY_NAMEColumn" msprop:Generator_UserColumnName="CATEGORY_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GROUP_CODE" msprop:Generator_ColumnVarNameInTable="columnGROUP_CODE" msprop:Generator_ColumnPropNameInRow="GROUP_CODE" msprop:Generator_ColumnPropNameInTable="GROUP_CODEColumn" msprop:Generator_UserColumnName="GROUP_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GROUP_NAME" msprop:Generator_ColumnVarNameInTable="columnGROUP_NAME" msprop:Generator_ColumnPropNameInRow="GROUP_NAME" msprop:Generator_ColumnPropNameInTable="GROUP_NAMEColumn" msprop:Generator_UserColumnName="GROUP_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

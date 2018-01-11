@@ -1,0 +1,148 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="NLN_Linen.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> N-Linen Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/app.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <asp:ImageButton ID="ImageButton1" runat="server" href="Views/LCS/LCS_Request.aspx" ImageUrl="Images/lognhealth.png" Width="150px" />
+                </div>
+                <div class="navbar-collapse collapse">
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="Account/Login">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right" id="admin">
+                                <li class="dropdown" runat="server" id="linenMaster">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" runat="server" role="button" id="masterMenu">Master<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Views/MASTER/ITEM/ITEM_Master.aspx">ITEM</a></li>
+                                        <li><a href="/Views/MASTER/USER/USER_Master.aspx">USER</a></li>
+                                        <li><a href="/Views/MASTER/PRICE/PRICE_Master.aspx">PRICE</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown" runat="server" id="linenMasterBu">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" runat="server" role="button" id="masterBuMenu">Master BU<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Views/MASTER/CUSTOMER/CUSTOMER_Master.aspx">DEPARTMENT</a></li>
+                                        <li><a href="/Views/MASTER/LAUNDRY/LAUNDRY_Master.aspx">LAUNDRY</a></li>
+                                        <li><a href="/Views/MASTER/CYCLE/CYCLE_Master.aspx">CYCLE TIME</a></li>
+                                        <li><a href="/Views/MASTER/PAR/PAR_Master.aspx">PAR</a></li>
+                                        <li><a href="/Views/MASTER/ITEM/ITEM_Master.aspx">ITEM</a></li>
+                                    </ul>
+                                </li>
+                                <li style="margin-right: 0 auto"><a href="/Views/LCS/LCS_Request.aspx">LCS</a></li>
+                                <li style="margin-right: 0 auto"><a href="/Views/RTN/RTN_Request.aspx">Return</a></li>
+                                <li style="margin-right: 0 auto"><a href="/Views/SOILED/SOILED_Request.aspx">SOILED</a></li>
+                                <li class="dropdown" runat="server" id="linenReport">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" runat="server" role="button" id="A1">Report<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Views/REPORT/ISSUE_Summary_Report.aspx">SUMMARY REPORT</a></li>
+                                        <li><a href="/Views/REPORT/ISSUE_Usage_Report.aspx">USAGE REPORT</a></li>
+                                        <li><a href="/Views/REPORT/ISSUE_Billing_Report.aspx">BILLING REPORT</a></li>
+                                        <li><a href="/Views/REPORT/ISSUE_Return_Report.aspx">RETURN REPORT</a></li>
+                                        <li><a href="/Views/REPORT/ISSUE_REPLENISHMENT_Report.aspx">REPLENISHMENT REPORT</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="Account/Login.aspx" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right" id="staff">
+                                <li class="dropdown" runat="server" id="li2">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" runat="server" role="button" id="A3">Master BU<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Views/MASTER/CUSTOMER/CUSTOMER_Master.aspx">DEPARTMENT</a></li>
+                                        <li><a href="/Views/MASTER/LAUNDRY/LAUNDRY_Master.aspx">LAUNDRY</a></li>
+                                        <li><a href="/Views/MASTER/CYCLE/CYCLE_Master.aspx">CYCLE TIME</a></li>
+                                        <li><a href="/Views/MASTER/PAR/PAR_Master.aspx">PAR</a></li>
+                                        <li><a href="/Views/MASTER/ITEM/ITEM_Master.aspx">ITEM</a></li>
+                                    </ul>
+                                </li>
+                                <li style="margin-right: 0 auto"><a href="/Views/LCS/LCS_Request.aspx">LCS</a></li>
+                                <li style="margin-right: 0 auto"><a href="/Views/RTN/RTN_Request.aspx">Return</a></li>
+                                <li style="margin-right: 0 auto"><a href="/Views/SOILED/SOILED_Request.aspx">SOILED</a></li>
+                                <li class="dropdown" runat="server" id="li3">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" runat="server" role="button" id="A4">Report<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Views/REPORT/ISSUE_Summary_Report.aspx">SUMMARY REPORT</a></li>
+                                        <li><a href="/Views/REPORT/ISSUE_Usage_Report.aspx">USAGE REPORT</a></li>
+                                        <li><a href="/Views/REPORT/ISSUE_Billing_Report.aspx">BILLING REPORT</a></li>
+                                        <li><a href="/Views/REPORT/ISSUE_Return_Report.aspx">RETURN REPORT</a></li>
+                                        <li><a href="/Views/REPORT/ISSUE_REPLENISHMENT_Report.aspx">REPLENISHMENT REPORT</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="Account/Login.aspx" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right" id="customer">
+                                <li style="margin-right: 0 auto"><a href="/Views/LCS/LCS_Request.aspx">LCS</a></li>
+                                <li style="margin-right: 0 auto"><a href="/Views/RTN/RTN_Request.aspx">Return</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="Account/Login.aspx" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> N-Linen Application</p>
+            </footer>
+        </div>
+        <div id="divProgress" style="display: none; padding-left: 80px; overflow: hidden;">
+            <img src="<%: ResolveUrl("~/Images/waiting.gif") %>" />
+        </div>
+    </form>
+</body>
+</html>
